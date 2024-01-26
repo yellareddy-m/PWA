@@ -1,4 +1,4 @@
-const STATIC_ASSETS = ["/", "/src/js/app.js", "/src/style.css", "/src/images/random.jpg"];
+const STATIC_ASSETS = ["/", "/src/js/app.js", "/src/style.css"];
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
