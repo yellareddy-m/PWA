@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Image Viewer</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Offline Image Viewer</h1>
+        <form id="form">
+            <input required type="text" id="imageUrl" placeholder="Image URL">
+            <button type="button" id='saveImgBtn'>Save Image</button>
+        </form>
+
+    </div>
+    <div id="images"></div>
+    <script src='src/js/app.js'></script>
+    <script>
+        // 1. REGISTER THE SERVICE WORKER FILE (/sw.js)
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service_worker.js', {scope: '/'}).then(function(registration) {
+                console.log('service worker registered successfully with scope : ' + registration.scope)
+            }).catch(function(err) {
+                console.log('srvice worker registration failed', err);
+            })
+        }        
+    </script>
+</body>
+
+</html>
