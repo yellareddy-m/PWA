@@ -24,7 +24,7 @@
     <script>
         // 1. REGISTER THE SERVICE WORKER FILE (/sw.js)
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service_worker.js', {scope: '/'}).then(function(registration) {
+            navigator.serviceWorker.register('./service_worker.js', {scope: '/PWA-Offline-Image-Viewer/'}).then(function(registration) {
                 console.log('service worker registered successfully with scope : ' + registration.scope)
             }).catch(function(err) {
                 console.log('srvice worker registration failed', err);
