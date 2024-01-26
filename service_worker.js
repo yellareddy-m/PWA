@@ -1,4 +1,4 @@
-const STATIC_ASSETS = ["/", "/src/js/app.js", "/src/style.css"];
+const STATIC_ASSETS = ["/PWA-Offline-Image-Viewer/", "/PWA-Offline-Image-Viewer/src/js/app.js", "/PWA-Offline-Image-Viewer/src/style.css"];
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
